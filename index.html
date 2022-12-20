@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">
+        <h1>Temperature Convertor</h1>
+    </div>
+    <div class="card">
+        <div class="input">
+            <div class="input1">
+                <h3 class="degree" >Degrees</h3>
+                <input type="number" id="degree"/>
+            </div>
+            <div class="input2">
+                <h3 class="type">Type</h3>
+                <select name="type" id="type">
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                    <option value="Rankine">Rankine</option>
+                    <option value="Reaumur">Reaumur</option>
+                </select>
+            </div>
+        </div>
+        <div class="result">
+            <h3>Result</h3>
+            <h5 id="result" class="resultText"></h5>
+        </div>
+        <button class="button" id="convert">Convert</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
