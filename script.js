@@ -7,36 +7,24 @@ const toFahrenheit=(deginput)=>{
     const ans= (deginput*(9/5))+32
     showResult(ans,'ºF')
 }
-const toKelvin=(deginput)=>{
-    const ans= deginput+273.15
-    showResult(ans,'K')
+const toCelcius=(deginput)=>{
+    const ans= (deginput-32)*(5/9)
+    showResult(ans,'ºC')
 }
-const toRankine=(deginput)=>{
-    const ans= (deginput*(9/5))+491.67 
-    showResult(ans,'ºR')
-}
-const toRéaumur=(deginput)=>{
-    const ans= deginput*0.8
-    showResult(ans,'ºRe')
-}
+
 
 convert.onclick=()=>{
     const deginput=Number(degreeInput.value)
     if(selectType.selectedIndex ==0){
-        toFahrenheit(deginput)
+        toCelcius(deginput)
     }
     else if(selectType.selectedIndex ==1){
-        toKelvin(deginput)
+        toFahrenheit(deginput)
     }
-    else if(selectType.selectedIndex ==2){
-        toRankine(deginput)
-    }
-    else{
-        toRéaumur(deginput)
-    }
+   
 }
 
 const resultDiv=document.getElementById('result')
 const showResult=(result,unit)=>{
-        resultDiv.innerText = `${result} ${unit}`
+        resultDiv.innerText = `${result.toFixed(2)} ${unit}`
 }
